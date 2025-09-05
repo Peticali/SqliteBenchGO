@@ -22,7 +22,7 @@ gonum.org/v1/plot
 The program accepts CLI flags to configure the benchmark:
 
 ```bash
-go run benchmark.go -writers=2 -readers=10 -duration=10 -memory=false
+go run main.go -writers=2 -readers=10 -duration=10 -memory=false
 ```
 | Flag | Tipo | Padrão	| Descrição |
 | -------- | ------- | ------- | ------- |
@@ -51,7 +51,7 @@ By default, the database is stored on disk as database.db.
 For an in-memory benchmark, use:
 
 ```bash
-go run benchmark.go -memory=true
+go run main.go -memory=true
 ```
 > Note: When using an in-memory database, the code ensures all threads share the same SQLite connection.
 
@@ -78,11 +78,11 @@ benchmark_plot_<timestamp>.png
 ## Example Usage
 ### Disk-based database
 ```bash
-go run benchmark.go -writers=4 -readers=8 -duration=15 -memory=false
+go run main.go -writers=4 -readers=8 -duration=15 -memory=false
 ```
 ### In-memory database
 ```bash
-go run benchmark.go -writers=2 -readers=10 -duration=10 -memory=true
+go run main.go -writers=2 -readers=10 -duration=10 -memory=true
 ```
 
 ## Notes
